@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <div class="container">
+        <!-- File grid -->
+        <div class="file-grid">
+            <!-- Each file div has an associated hidden input for file upload -->
+            <div class="file" onclick="attachFile(this)">File-1</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+            
+            <div class="file" onclick="attachFile(this)">File-2</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+            
+            <!-- Repeat for all files -->
+            <div class="file" onclick="attachFile(this)">File-3</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+            
+            <div class="file" onclick="attachFile(this)">File-4</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-5</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-6</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-7</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-8</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-9</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-10</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-11</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-12</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-13</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-14</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-15</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-16</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-17</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-18</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-19</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            <div class="file" onclick="attachFile(this)">File-20</div>
+            <input type="file" class="file-input" onchange="fileAttached(this)" style="display:none;">
+
+            
+            
+            
+
+
+
+            <!-- Continue with additional files as needed... -->
+        </div>
+        
+        <!-- Buttons -->
+        <div class="button-container">
+            <a href="#" class="button pdf-button">Generate To PDF</a>
+            <a href="#" class="button panghora-button">Generate To Panghora</a>
+            <a href="#" class="button excel-button">Generate To Excel</a>
+        </div>
+    </div>
+    <script>
+        // Function to trigger file input
+        function attachFile(fileElement) {
+            const fileInput = fileElement.nextElementSibling; // Select the hidden file input next to the clicked file div
+            fileInput.click(); // Trigger the file input click
+        }
+
+        // Function to handle file attachment and change color to green
+        function fileAttached(inputElement) {
+            const fileDiv = inputElement.previousElementSibling; // Select the file div associated with this input
+            if (inputElement.files.length > 0) { // Check if a file has been selected
+                fileDiv.classList.add('uploaded'); // Add the 'uploaded' class to change color to green
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
